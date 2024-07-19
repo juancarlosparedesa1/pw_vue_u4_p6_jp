@@ -1,16 +1,16 @@
 <template>
-  <MatriculasPage/>
+  <EstudiantesPage />
 </template>
 
 <script>
-import MatriculasPage from './pages/MatriculasPage.vue'
+import EstudiantesPage from "./pages/EstudiantesPage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    MatriculasPage,
-  }
-}
+    EstudiantesPage,
+  },
+};
 </script>
 
 <style>
