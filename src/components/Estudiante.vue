@@ -4,14 +4,14 @@
       <h1>CONSULTAR Y ACTUALIZAR ESTUDIANTE</h1>
       <div class="formulario">
         <form class="form" action="">
-          <p type="Id"><input type="text" /></p>
+          <p type="Cedula"><input v-model="cedula" type="text" /></p>
           <p type="Nombre"><input type="text" /></p>
           <p type="Apellido"><input type="text" /></p>
           <p type="Fecha Nacimiento">
             <input id="idFechaNacimiento" type="date" />
           </p>
           <p type="Genero"><input type="text" /></p>
-          <button>Consultar</button>
+          <button v-on:click="consultar">Consultar</button>
           <button>Actualizar</button>
         </form>
       </div>
@@ -20,7 +20,24 @@
 </template>
 
 <script>
-export default {};
+import {
+  obtenerPorCedulaAxiosFachada,
+  actualizarFachada,
+} from "../clients/clienteEstudiante.js";
+export default {
+  data() {
+    return {
+      cedula: null,
+    };
+  },
+  methods: {
+    async consultar() {
+      console.log(this.cedula);
+      const data = await obtenerPorCedulaAxiosFachada(this.cedula);
+      console.log(data);
+    },
+  },
+};
 </script>
 
 <style>
