@@ -23,7 +23,7 @@
 import {
   obtenerPorCedulaAxiosFachada,
   actualizarFachada,
-} from "../clients/clienteEstudiante.js";
+} from "../clients/clienteEstudiante.js"; 
 export default {
   data() {
     return {

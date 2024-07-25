@@ -1,14 +1,14 @@
 <template>
-  <EstudiantesPage />
+  <router-view />
 </template>
 
 <script>
-import EstudiantesPage from "./pages/EstudiantesPage.vue";
+import BienvenidoPage from "./pages/BienvenidoPage.vue";
+import router from "./router/router";
 
 export default {
   name: "App",
   components: {
-    EstudiantesPage,
   },
 };
 </script>
